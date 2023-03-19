@@ -71,3 +71,11 @@ From this labeled dataset, we attempted to train a model to predict if the loans
 **Classification Report:**  
 ![Model 2 Classification Report](Images/ros_report.png)
 ## Summary
+
+Both models performed extremely well in predicting Healthy loans with 100% Precision and 99% Recall, but our first model scored a bit lower with High Risk loans.  With a Precision score of 85% it returned 102 false positives in our tests.  It also returned 56 false negatives with a Recall score of 91%.
+
+The resampled data seemed to make a noticable impact in improving performance, particularly on Recall, which jumped from 91% up to 99% and brought our overall Balanced Accuracy Score up from 95.2% to 99.4%.  The false negatives dropped considerably, from 56 to only 4, however there was a slight increase in false positives, from 102 to 116, accounting for the decrease in Precision for this model, dropping from 85% to 84%.  This was the only metric where our second model was outperformed by the first.
+
+These changes make sense, given the tendency for Random Oversampling to over-represent the minority group by nature of how it works, but given the final results there does seem to be an improvement in performance which looks very promising.
+
+The performance of this model in the real world will depend greatly on the context in which it is used (i.e. if it is more important for it to predict the High Risk loans or the Healthy ones).  I would recommend discussing these results with an industry Subject Matter Expert to determine its use-case and the implications for trading a decrease in false negatives for an increase in false positives to determine a final decision on whether to implement this model, but the strong Accuracy and Recall scores indicate that this model is likely to perform well in the real world based on the data we've collected so far.
