@@ -20,7 +20,7 @@ Historical lending activity from a peer-to-peer lending services company includi
 
 ### Process
 
-From this labeled dataset, we attempted to train a model to predict if the loans were marked as "High Risk" or "Healthy" using `Logistic Regression Analysis` for classification.  To accomplish this goal we trained two models according to the following process:  
+From this labeled dataset, we attempted to train a model to predict if the loans were marked as "High Risk" or "Healthy" using `Logistic Regression Analysis` for classification.  To accomplish this goal we [trained two models](Credit_Risk/credit_risk_classification.ipynb) according to the following process:  
 
 1. Separating the labels from the loan data so the model couldn't "see" what it was trying to predict.
 2. Splitting the data into training  and testing segments so the model would have data it hadn't seen before to test if our training had worked.
